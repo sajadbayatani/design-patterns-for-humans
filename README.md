@@ -73,52 +73,46 @@ First of all we have a door interface and the implementation
 ```java
 interface Door
 {
-    public float getWidth();
-    public float getHeight();
+    Float getWidth();
+    Float getHeight();
 }
 
-class WoodenDoor implements Door
-{
-    protected float width;
-    protected float height;
+class WoodenDoor implements Door{
+    Float width;
+    Float height;
 
-    public WoodenDoor(float width, float height)
-    {
+    public WoodenDoor(float width, float height)    {
         this.width = width;
         this.height = height;
     }
 
-    public float getWidth()
-    {
+    public float getWidth(){
         return this.width;
     }
 
-    public float getHeight():
-    {
+    public float getHeight(){
         return this.height;
     }
 }
 ```
 Then we have our door factory that makes the door and returns it
-```php
-class DoorFactory
-{
-    public static function makeDoor($width, $height): Door
-    {
-        return new WoodenDoor($width, $height);
+```java
+class DoorFactory{
+    public static Door makeDoor(width, height){
+        return new WoodenDoor(width, height);
     }
 }
 ```
 And then it can be used as
-```php
+```java
 // Make me a door of 100x200
-$door = DoorFactory::makeDoor(100, 200);
+Door door = DoorFactory.makeDoor(100, 200);
 
-echo 'Width: ' . $door->getWidth();
-echo 'Height: ' . $door->getHeight();
+System.out.println("Width: " + door.getWidth());
+System.out.println("Height: " + door.getHeight());
 
 // Make me a door of 50x100
-$door2 = DoorFactory::makeDoor(50, 100);
+Door door2 = DoorFactory.makeDoor(50, 100);
 ```
 
 **When to Use?**
