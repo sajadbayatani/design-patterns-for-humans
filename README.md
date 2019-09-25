@@ -70,32 +70,32 @@ Wikipedia says
 **Programmatic Example**
 
 First of all we have a door interface and the implementation
-```php
+```java
 interface Door
 {
-    public function getWidth(): float;
-    public function getHeight(): float;
+    public float getWidth();
+    public float getHeight();
 }
 
 class WoodenDoor implements Door
 {
-    protected $width;
-    protected $height;
+    protected float width;
+    protected float height;
 
-    public function __construct(float $width, float $height)
+    public WoodenDoor(float width, float height)
     {
-        $this->width = $width;
-        $this->height = $height;
+        this.width = width;
+        this.height = height;
     }
 
-    public function getWidth(): float
+    public float getWidth()
     {
-        return $this->width;
+        return this.width;
     }
 
-    public function getHeight(): float
+    public float getHeight():
     {
-        return $this->height;
+        return this.height;
     }
 }
 ```
