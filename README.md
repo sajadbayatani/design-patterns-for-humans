@@ -158,42 +158,37 @@ Now let us create our `HiringManager`
 abstract class HiringManager {
 
     // Factory method
-    abstract protected function makeInterviewer(): Interviewer;
+    abstract protected Interviewer makeInterviewer();
 
-    public function takeInterview()
-    {
-        $interviewer = $this->makeInterviewer();
-        $interviewer->askQuestions();
+    public function takeInterview() {
+        Interviewer interviewer = this.makeInterviewer();
+        interviewer.askQuestions();
     }
 }
 
 ```
 Now any child can extend it and provide the required interviewer
-```php
-class DevelopmentManager extends HiringManager
-{
-    protected function makeInterviewer(): Interviewer
-    {
+```java
+class DevelopmentManager extends HiringManager {
+    protected Interviewer makeInterviewer() {
         return new Developer();
     }
 }
 
-class MarketingManager extends HiringManager
-{
-    protected function makeInterviewer(): Interviewer
-    {
+class MarketingManager extends HiringManager {
+    protected Interviewer makeInterviewer() {
         return new CommunityExecutive();
     }
 }
 ```
 and then it can be used as
 
-```php
-$devManager = new DevelopmentManager();
-$devManager->takeInterview(); // Output: Asking about design patterns
+```java
+DevelopmentManager devManager = new DevelopmentManager();
+devManager.takeInterview(); // Output: Asking about design patterns
 
-$marketingManager = new MarketingManager();
-$marketingManager->takeInterview(); // Output: Asking about community building.
+MarketingManager marketingManager = new MarketingManager();
+marketingManager.takeInterview(); // Output: Asking about community building.
 ```
 
 **When to use?**
