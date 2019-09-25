@@ -11,7 +11,7 @@ A topic that can easily make anyone's mind wobble. Here I try to make them stick
 
 ***
 
-<sub>Check out my [blog](http://kamranahmed.info) and say "hi" on [Twitter](https://twitter.com/kamranahmedse).</sub>
+<sub>Check out my [blog](http://sbayatani.ir) and say "hi" on [Twitter](https://twitter.com/sajadbayatani).</sub>
 
 Introduction
 =================
@@ -31,7 +31,7 @@ Wikipedia describes them as
 - Keep in mind that design patterns are solutions **to** problems, not solutions **finding** problems; so don't overthink.
 - If used in a correct place in a correct manner, they can prove to be a savior; or else they can result in a horrible mess of a code.
 
-> Also note that the code samples below are in PHP-7, however this shouldn't stop you because the concepts are same anyways.
+> Also note that the code samples below are in JAVA, however this shouldn't stop you because the concepts are same anyways.
 
 Types of Design Patterns
 -----------------
