@@ -108,8 +108,8 @@ And then it can be used as
 // Make me a door of 100x200
 Door door = DoorFactory.makeDoor(100, 200);
 
-System.out.println("Width: " + door.getWidth());
-System.out.println("Height: " + door.getHeight());
+System.out.println("Width: {}", door.getWidth());
+System.out.println("Height: {}", door.getHeight());
 
 // Make me a door of 50x100
 Door door2 = DoorFactory.makeDoor(50, 100);
