@@ -71,34 +71,33 @@ Wikipedia says
 
 First of all we have a door interface and the implementation
 ```java
-interface Door
-{
+interface Door {
     Float getWidth();
     Float getHeight();
 }
 
-class WoodenDoor implements Door{
+class WoodenDoor implements Door {
     Float width;
     Float height;
 
-    public WoodenDoor(float width, float height)    {
+    public WoodenDoor(float width, float height) {
         this.width = width;
         this.height = height;
     }
 
-    public float getWidth(){
+    public Float getWidth() {
         return this.width;
     }
 
-    public float getHeight(){
+    public Float getHeight() {
         return this.height;
     }
 }
 ```
 Then we have our door factory that makes the door and returns it
 ```java
-class DoorFactory{
-    public static Door makeDoor(width, height){
+class DoorFactory {
+    public static Door makeDoor(width, height) {
         return new WoodenDoor(width, height);
     }
 }
@@ -135,34 +134,28 @@ Wikipedia says
 
 Taking our hiring manager example above. First of all we have an interviewer interface and some implementations for it
 
-```php
-interface Interviewer
-{
-    public function askQuestions();
+```java
+interface Interviewer {
+    public void askQuestions();
 }
 
-class Developer implements Interviewer
-{
-    public function askQuestions()
-    {
-        echo 'Asking about design patterns!';
+class Developer implements Interviewer {
+    public void askQuestions() {
+        System.out.println("Asking about design patterns!");
     }
 }
 
-class CommunityExecutive implements Interviewer
-{
-    public function askQuestions()
-    {
-        echo 'Asking about community building';
+class CommunityExecutive implements Interviewer {
+    public void askQuestions() {
+        System.out.println("Asking about community building");
     }
 }
 ```
 
 Now let us create our `HiringManager`
 
-```php
-abstract class HiringManager
-{
+```java
+abstract class HiringManager {
 
     // Factory method
     abstract protected function makeInterviewer(): Interviewer;
